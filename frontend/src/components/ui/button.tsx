@@ -29,25 +29,25 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      'inline-flex items-center justify-center font-medium transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer';
+      'inline-flex items-center justify-center font-bold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer';
 
     const variants = {
       primary:
         'bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 shadow-sm focus-visible:ring-blue-500 border border-transparent',
       secondary:
-        'bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700',
+        'bg-slate-100 text-slate-900 hover:bg-slate-200 active:bg-slate-300 border border-slate-300',
       outline:
-        'bg-transparent border border-slate-300 text-slate-700 hover:bg-slate-50 active:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800 focus-visible:ring-blue-500',
+        'bg-white border-2 border-slate-300 text-slate-800 hover:bg-slate-100 active:bg-slate-200 hover:border-slate-400 focus-visible:ring-blue-500 shadow-xs',
       ghost:
-        'bg-transparent text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white',
+        'bg-transparent text-slate-700 hover:bg-slate-100 hover:text-slate-950',
       destructive:
         'bg-rose-600 text-white hover:bg-rose-700 active:bg-rose-800 shadow-sm focus-visible:ring-rose-500 border border-transparent',
     };
 
     const sizes = {
-      sm: 'text-xs px-3 py-1.5 rounded-md gap-1.5',
-      md: 'text-sm px-4 py-2 rounded-lg gap-2',
-      lg: 'text-base px-5 py-2.5 rounded-lg gap-2.5',
+      sm: 'text-xs px-3 py-1.5 rounded-lg gap-1.5',
+      md: 'text-sm px-4 py-2 rounded-xl gap-2',
+      lg: 'text-base px-6 py-3 rounded-xl gap-2.5',
     };
 
     return (

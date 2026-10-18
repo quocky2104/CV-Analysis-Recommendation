@@ -24,11 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans">
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
-        <Toaster position="top-right" richColors closeButton />
+        <Toaster position="top-right" richColors closeButton theme="light" />
       </body>
     </html>
   );

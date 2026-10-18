@@ -23,19 +23,19 @@ export function Progress({
   const percentage = Math.min(Math.max(Math.round((value / max) * 100), 0), 100);
 
   const colorVariants = {
-    primary: 'bg-blue-600 dark:bg-blue-500',
-    success: 'bg-emerald-600 dark:bg-emerald-500',
-    warning: 'bg-amber-500 dark:bg-amber-400',
-    danger: 'bg-rose-600 dark:bg-rose-500',
+    primary: 'bg-blue-600',
+    success: 'bg-emerald-600',
+    warning: 'bg-amber-500',
+    danger: 'bg-rose-600',
   };
 
   return (
     <div className={cn('w-full space-y-1.5', className)} {...props}>
       {(label || showValue) && (
-        <div className="flex justify-between items-center text-xs font-medium text-slate-700 dark:text-slate-300">
+        <div className="flex justify-between items-center text-xs font-bold text-slate-800">
           {label && <span>{label}</span>}
           {showValue && (
-            <span className="text-slate-500 dark:text-slate-400 font-mono">
+            <span className="text-slate-700 font-mono font-bold">
               {value}
               {valueSuffix}
             </span>
@@ -43,7 +43,7 @@ export function Progress({
         </div>
       )}
       <div
-        className="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden dark:bg-slate-800"
+        className="w-full h-3 bg-slate-200 rounded-full overflow-hidden border border-slate-300"
         role="progressbar"
         aria-valuenow={value}
         aria-valuemin={0}

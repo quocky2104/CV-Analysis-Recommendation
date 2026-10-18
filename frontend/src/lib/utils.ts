@@ -36,27 +36,27 @@ export function getScoreColor(score: number): {
 } {
   if (score >= 70) {
     return {
-      text: 'text-emerald-700 dark:text-emerald-300',
-      bg: 'bg-emerald-50 dark:bg-emerald-950/30',
-      border: 'border-emerald-300 dark:border-emerald-800',
-      fill: '#10b981', // emerald-500
+      text: 'text-emerald-800',
+      bg: 'bg-emerald-50',
+      border: 'border-emerald-300',
+      fill: '#059669', // emerald-600
       level: 'high',
     };
   }
   if (score >= 40) {
     return {
-      text: 'text-amber-700 dark:text-amber-300',
-      bg: 'bg-amber-50 dark:bg-amber-950/30',
-      border: 'border-amber-300 dark:border-amber-800',
-      fill: '#f59e0b', // amber-500
+      text: 'text-amber-800',
+      bg: 'bg-amber-50',
+      border: 'border-amber-300',
+      fill: '#d97706', // amber-600
       level: 'medium',
     };
   }
   return {
-    text: 'text-rose-700 dark:text-rose-300',
-    bg: 'bg-rose-50 dark:bg-rose-950/30',
-    border: 'border-rose-300 dark:border-rose-800',
-    fill: '#ef4444', // rose-500
+    text: 'text-rose-800',
+    bg: 'bg-rose-50',
+    border: 'border-rose-300',
+    fill: '#dc2626', // rose-600
     level: 'low',
   };
 }
@@ -71,20 +71,20 @@ export function getStatusBadgeProps(status: MatchStatus): {
       return {
         label: 'Khớp hoàn toàn',
         symbol: '✓',
-        className: 'bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800',
+        className: 'bg-emerald-50 text-emerald-900 border-emerald-300 font-bold',
       };
     case 'partial_match':
       return {
         label: 'Khớp một phần',
         symbol: '~',
-        className: 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800',
+        className: 'bg-amber-50 text-amber-900 border-amber-300 font-bold',
       };
     case 'not_evidenced':
     default:
       return {
         label: 'Chưa có bằng chứng',
         symbol: '✕',
-        className: 'bg-rose-100 text-rose-800 border-rose-200 dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-800',
+        className: 'bg-rose-50 text-rose-900 border-rose-300 font-bold',
       };
   }
 }
@@ -97,18 +97,18 @@ export function getPriorityBadgeProps(priority: Priority): {
     case 'required':
       return {
         label: 'Bắt buộc',
-        className: 'bg-rose-100 text-rose-800 border-rose-200 dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-800',
+        className: 'bg-rose-50 text-rose-900 border-rose-300 font-bold',
       };
     case 'preferred':
       return {
         label: 'Ưu tiên',
-        className: 'bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800',
+        className: 'bg-amber-50 text-amber-900 border-amber-300 font-bold',
       };
     case 'nice_to_have':
     default:
       return {
         label: 'Điểm cộng',
-        className: 'bg-sky-100 text-sky-800 border-sky-200 dark:bg-sky-950/60 dark:text-sky-300 dark:border-sky-800',
+        className: 'bg-blue-50 text-blue-900 border-blue-300 font-bold',
       };
   }
 }

@@ -14,35 +14,35 @@ export function Footer() {
   const currentYear = 2026;
 
   return (
-    <footer className="border-t border-slate-200 bg-white/50 backdrop-blur-xs py-8 text-sm text-slate-500 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-400">
+    <footer className="border-t border-slate-200 bg-white py-8 text-sm text-slate-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left info */}
           <div className="flex flex-col items-center md:items-start gap-1">
-            <div className="flex items-center gap-2 font-semibold text-slate-800 dark:text-slate-200">
-              <span>CVision AI</span>
-              <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+            <div className="flex items-center gap-2 font-bold text-slate-900">
+              <span className="text-base">CVision AI</span>
+              <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200">
                 v1.0.0
               </span>
             </div>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-600 font-medium">
               Nền tảng đối chiếu và tối ưu hóa CV dựa trên bằng chứng thực tế
             </p>
           </div>
 
           {/* Privacy badge */}
-          <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+          <div className="flex items-center gap-1.5 text-xs text-slate-700 font-medium">
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>Không lưu trữ dữ liệu cá nhân trừ khi yêu cầu</span>
           </div>
 
           {/* Links & Attribution */}
-          <div className="flex items-center gap-4 text-xs">
+          <div className="flex items-center gap-4 text-xs text-slate-600 font-medium">
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-slate-900 dark:hover:text-white transition-colors"
+              className="inline-flex items-center gap-1.5 hover:text-slate-950 transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
               <span>Mã nguồn GitHub</span>

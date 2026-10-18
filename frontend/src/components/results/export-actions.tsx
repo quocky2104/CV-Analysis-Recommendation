@@ -93,7 +93,7 @@ export function ExportActions({ analysisData, suggestionStates }: ExportActionsP
         isLoading={isExportingPdf}
         leftIcon={<FileText className="w-4 h-4 text-rose-600" />}
         onClick={handleExportPdf}
-        className="w-full sm:w-auto font-semibold"
+        className="w-full sm:w-auto font-bold border-2 border-slate-300 text-slate-800 hover:bg-slate-100 shadow-xs"
       >
         Xuất Báo Cáo PDF
       </Button>
@@ -108,14 +108,14 @@ export function ExportActions({ analysisData, suggestionStates }: ExportActionsP
           leftIcon={<Download className="w-4 h-4" />}
           rightIcon={canExportCv ? <CheckCheck className="w-3.5 h-3.5" /> : undefined}
           onClick={handleExportDocx}
-          className="w-full sm:w-auto font-semibold"
+          className="w-full sm:w-auto font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-sm"
         >
           Xuất CV Tối Ưu (.DOCX)
         </Button>
 
         {!canExportCv && (
-          <div className="hidden group-hover:flex absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-64 p-2 text-xs rounded-lg bg-slate-900 text-white shadow-lg z-50 items-center gap-1.5 pointer-events-none">
-            <AlertCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          <div className="hidden group-hover:flex absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-64 p-2 text-xs font-semibold rounded-lg bg-slate-900 text-white shadow-lg z-50 items-center gap-1.5 pointer-events-none">
+            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
             <span>Chấp nhận ít nhất 1 đề xuất ở mục bên dưới để kích hoạt xuất CV</span>
           </div>
         )}

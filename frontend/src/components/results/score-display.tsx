@@ -37,8 +37,8 @@ export function ScoreDisplay({
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
-      <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+    <div className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border-2 border-slate-200 shadow-sm">
+      <h3 className="text-xs font-black uppercase tracking-wider text-slate-600 mb-2">
         Điểm khớp tổng thể
       </h3>
 
@@ -73,40 +73,40 @@ export function ScoreDisplay({
           <span className="text-4xl sm:text-5xl font-black tracking-tight" style={{ color: colorInfo.fill }}>
             {score}%
           </span>
-          <span className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">
+          <span className="text-xs font-bold text-slate-700 mt-1">
             {score >= 70 ? 'Phù hợp cao' : score >= 40 ? 'Phù hợp vừa' : 'Cần bổ sung'}
           </span>
         </div>
       </div>
 
       {/* Quick summary metrics */}
-      <div className="grid grid-cols-3 gap-2 w-full mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-center">
-        <div className="flex flex-col items-center p-2 rounded-lg bg-emerald-50/60 dark:bg-emerald-950/20">
-          <div className="flex items-center gap-1 text-xs text-emerald-700 dark:text-emerald-300 font-medium">
-            <CheckCircle2 className="w-3.5 h-3.5" />
+      <div className="grid grid-cols-3 gap-2 w-full mt-4 pt-4 border-t border-slate-200 text-center">
+        <div className="flex flex-col items-center p-2.5 rounded-xl bg-emerald-50 border border-emerald-300">
+          <div className="flex items-center gap-1 text-xs text-emerald-800 font-bold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
             <span>Khớp</span>
           </div>
-          <span className="text-lg font-bold text-emerald-800 dark:text-emerald-200">
+          <span className="text-base font-black text-emerald-950 mt-0.5">
             {matchedCount}/{totalRequirements}
           </span>
         </div>
 
-        <div className="flex flex-col items-center p-2 rounded-lg bg-amber-50/60 dark:bg-amber-950/20">
-          <div className="flex items-center gap-1 text-xs text-amber-700 dark:text-amber-300 font-medium">
-            <AlertTriangle className="w-3.5 h-3.5" />
+        <div className="flex flex-col items-center p-2.5 rounded-xl bg-amber-50 border border-amber-300">
+          <div className="flex items-center gap-1 text-xs text-amber-800 font-bold">
+            <AlertTriangle className="w-3.5 h-3.5 text-amber-700" />
             <span>Một phần</span>
           </div>
-          <span className="text-lg font-bold text-amber-800 dark:text-amber-200">
+          <span className="text-base font-black text-amber-950 mt-0.5">
             {partialCount}/{totalRequirements}
           </span>
         </div>
 
-        <div className="flex flex-col items-center p-2 rounded-lg bg-rose-50/60 dark:bg-rose-950/20">
-          <div className="flex items-center gap-1 text-xs text-rose-700 dark:text-rose-300 font-medium">
-            <AlertCircle className="w-3.5 h-3.5" />
+        <div className="flex flex-col items-center p-2.5 rounded-xl bg-rose-50 border border-rose-300">
+          <div className="flex items-center gap-1 text-xs text-rose-800 font-bold">
+            <AlertCircle className="w-3.5 h-3.5 text-rose-700" />
             <span>Chưa thấy</span>
           </div>
-          <span className="text-lg font-bold text-rose-800 dark:text-rose-200">
+          <span className="text-base font-black text-rose-950 mt-0.5">
             {notEvidencedCount}/{totalRequirements}
           </span>
         </div>
