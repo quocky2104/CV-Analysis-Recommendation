@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+.env
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Uploads and temporary files
+uploads/
+temp_exports/
+*.tmp
+
+# Test coverage
+htmlcov/
+.coverage
+.pytest_cache/
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
